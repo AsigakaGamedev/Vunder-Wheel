@@ -10,7 +10,7 @@ namespace Assets.Scripts.Money
 
         private void OnEnable()
         {
-            text.text = PlayerPrefs.GetInt("record", 0).ToString();
+            text.text = $"RECORD: {PlayerPrefs.GetInt("record", 0)}";
         }
     }
 }
