@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carouselBody: {fileID: 1217691825}
-  carouselSpeed: 85
+  carouselSpeed: 65
   spawnPoints:
   - {fileID: 74820831}
   - {fileID: 123522676}

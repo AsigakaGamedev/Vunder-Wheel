@@ -16,6 +16,7 @@ public class UICarouselSkin : MonoBehaviour
     [SerializeField] private GameObject equipIcon;
     [SerializeField] private GameObject equiped;
     [SerializeField] private GameObject equiped1;
+    [SerializeField] private GameObject equiped2;
     [SerializeField] private Button equipBtn;
     [SerializeField] private GameObject realmoney;
 
@@ -72,5 +73,6 @@ public class UICarouselSkin : MonoBehaviour
 
         equiped.SetActive(isEquiped);
         equiped1.SetActive(isEquiped);
+        equiped2.SetActive(isEquiped);
     }
 }
