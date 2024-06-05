@@ -126,10 +126,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allSkins:
   - {fileID: 11400000, guid: b27bd607ce1b3fd4c9a779996934f18e, type: 2}
+  - {fileID: 11400000, guid: 7ca1255cca3ead14d89d9006810f7a91, type: 2}
   - {fileID: 11400000, guid: 7beb17fa807b95946a58cbb5aea3d136, type: 2}
   - {fileID: 11400000, guid: 5305ece7ffe3d0d408a47f1fa06f22e4, type: 2}
   - {fileID: 11400000, guid: 846ed8786f8ce8e4da61b4ccbb60de1c, type: 2}
-  - {fileID: 11400000, guid: 7ca1255cca3ead14d89d9006810f7a91, type: 2}
   currentSkin: {fileID: 0}
 --- !u!1 &3328509142490959876
 GameObject:
@@ -177,10 +177,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allSkins:
   - {fileID: 11400000, guid: 358ab4cef9b3a7a469b86b31c4f7c778, type: 2}
+  - {fileID: 11400000, guid: e8f8459948404564487f9f044b2d7889, type: 2}
   - {fileID: 11400000, guid: aceb818b9c7399146a60ca63d949bfac, type: 2}
   - {fileID: 11400000, guid: 07cd44729bc2a2545bd998437390abbf, type: 2}
   - {fileID: 11400000, guid: ee66aafc04773ef4dac2e1656a08d634, type: 2}
-  - {fileID: 11400000, guid: e8f8459948404564487f9f044b2d7889, type: 2}
   currentSkin: {fileID: 0}
 --- !u!1 &6181401966656414647
 GameObject:

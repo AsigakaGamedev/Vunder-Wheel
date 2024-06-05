@@ -15,6 +15,7 @@ MonoBehaviour:
   skinName: Mythical
   skinVisual: {fileID: 21300000, guid: ca634579bec00e947a8a5023a82416fc, type: 3}
   skinDown: {fileID: 21300000, guid: 4db87d4a2d3772a46b8963938e06d3d3, type: 3}
+  gameSkin: {fileID: 21300000, guid: 01c72085f7b99d34abcfe06a93d1a821, type: 3}
   cost: 1000
   buyed: 0
   realMoney: 1

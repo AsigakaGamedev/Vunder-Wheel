@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class CarouselManager : MonoBehaviour
 {
@@ -8,13 +9,37 @@ public class CarouselManager : MonoBehaviour
     [SerializeField] private float carouselSpeed = 10;
 
     [Space]
+    [SerializeField] private CarouselInfo defaultSkin;
+    [SerializeField] private SpriteRenderer borderRender;
+    [SerializeField] private SpriteRenderer centerRender;
+    [SerializeField] private SpriteRenderer[] iconsRenders;
+
+    [Space]
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private Ball[] carouselBalls;
 
+    private CarouselsSkinsManager skinsManager;
     private Transform parent;
+
+    [Inject]
+    private void Construct(CarouselsSkinsManager skinsManager)
+    {
+        this.skinsManager = skinsManager;
+    }
 
     private void Start()
     {
+        if (skinsManager.CurrentSkin != defaultSkin)
+        {
+            borderRender.sprite = skinsManager.CurrentSkin.SkinBorder;
+            centerRender.sprite = skinsManager.CurrentSkin.SkinCenter;
+
+            foreach (SpriteRenderer icon in iconsRenders)
+            {
+                icon.sprite = skinsManager.CurrentSkin.SkinIcon;
+            }
+        }
+
         foreach (var p in spawnPoints)
         {
             Ball newBall = Instantiate(carouselBalls[Random.Range(0, carouselBalls.Length)], p);

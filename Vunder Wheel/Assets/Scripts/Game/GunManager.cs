@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class GunManager : MonoBehaviour
 {
@@ -11,10 +12,24 @@ public class GunManager : MonoBehaviour
     [SerializeField] private float shotForce = 40;
     [SerializeField] private Vector3 rotateAngle;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    private GunSkinsManager gunSkinsManager;
+
+    [Inject]
+    private void Construct(GunSkinsManager gunSkinsManager)
+    {
+        this.gunSkinsManager = gunSkinsManager;
+    }
 
     private void Awake()
     {
         laserPrefab.SetActive(false);
+    }
+
+    private void Start()
+    {
+        spriteRenderer.sprite = gunSkinsManager.CurrentSkin.GameSkin;
     }
 
     private void Update()

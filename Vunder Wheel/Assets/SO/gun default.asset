@@ -15,5 +15,8 @@ MonoBehaviour:
   skinName: Default
   skinVisual: {fileID: 21300000, guid: ad15f1ef968788c4d97471c979d9a375, type: 3}
   skinDown: {fileID: 21300000, guid: 27b549f93e797164c9b24a9b55a8450a, type: 3}
+  gameSkin: {fileID: 21300000, guid: 96e02c293c0c83442b02be01493ae280, type: 3}
   cost: 0
   buyed: 1
+  realMoney: 0
+  buyID: 

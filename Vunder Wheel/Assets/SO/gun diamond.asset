@@ -15,5 +15,8 @@ MonoBehaviour:
   skinName: Diamond
   skinVisual: {fileID: 21300000, guid: ef856eded85395546a49cda056c23331, type: 3}
   skinDown: {fileID: 21300000, guid: 6eaf38f12055fdd44892dc1131404aaa, type: 3}
+  gameSkin: {fileID: 21300000, guid: e8d4a07d67d9fc344911bcd372b23214, type: 3}
   cost: 1000
   buyed: 0
+  realMoney: 0
+  buyID: 

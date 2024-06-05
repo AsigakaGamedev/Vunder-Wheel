@@ -8,6 +8,7 @@ public class GunSkinInfo : ScriptableObject
     [SerializeField] private string skinName;
     [SerializeField] private Sprite skinVisual;
     [SerializeField] private Sprite skinDown;
+    [SerializeField] private Sprite gameSkin;
 
     [Space]
     [SerializeField] private int cost;
@@ -25,4 +26,5 @@ public class GunSkinInfo : ScriptableObject
     public bool Buyed { get => buyed; set => buyed = value; }
     public bool RealMoney { get => realMoney; }
     public string BuyID { get => buyID; }
+    public Sprite GameSkin { get => gameSkin; }
 }
