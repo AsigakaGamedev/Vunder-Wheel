@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2312015825518566339}
   - component: {fileID: 3747763732086350425}
   - component: {fileID: 1635104831702710224}
+  - component: {fileID: 460601747574113156}
   m_Layer: 0
   m_Name: ProjectContext
   m_TagString: Untagged
@@ -80,6 +81,21 @@ MonoBehaviour:
   gunSkinsMnager: {fileID: 2716843478802597242}
   carouselsSkins: {fileID: 2636310517534763668}
   moneyManager: {fileID: 2611614244795610938}
+  purchaseManager: {fileID: 460601747574113156}
+--- !u!114 &460601747574113156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399917702430175738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a163ad21505d342baf408f8c318c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunSkinInfo: {fileID: 11400000, guid: 7ca1255cca3ead14d89d9006810f7a91, type: 2}
+  carouselInfo: {fileID: 11400000, guid: e8f8459948404564487f9f044b2d7889, type: 2}
 --- !u!1 &1568305119598335239
 GameObject:
   m_ObjectHideFlags: 0

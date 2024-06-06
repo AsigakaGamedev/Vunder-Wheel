@@ -29,14 +29,14 @@ public class GunSkinsManager : MonoBehaviour
 
         if (newSkin.RealMoney)
         {
-            int buyed = PlayerPrefs.GetInt(newSkin.BuyID, 0);
-            newSkin.Buyed = buyed == 1;
+            //int buyed = PlayerPrefs.GetInt(newSkin.BuyID, 0);
+            //newSkin.Buyed = buyed == 1;
 
             if (newSkin.Buyed == false)
             {
                 TryBuyProduct(newSkin.BuyID);
                 newSkin.Buyed = true;
-                PlayerPrefs.SetInt(newSkin.BuyID, 1);
+                //PlayerPrefs.SetInt(newSkin.BuyID, 1);
             }
         }
         else if (tryBuy && !newSkin.Buyed)

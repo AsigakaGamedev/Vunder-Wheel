@@ -28,14 +28,14 @@ public class CarouselsSkinsManager : MonoBehaviour
         CarouselInfo newSkin = allSkins[index];
         if (newSkin.RealMoney)
         {
-            int buyed = PlayerPrefs.GetInt(newSkin.BuyID, 0);
-            newSkin.Buyed = buyed == 1;
+            //int buyed = PlayerPrefs.GetInt(newSkin.BuyID, 0);
+            //newSkin.Buyed = buyed == 1;
 
             if (newSkin.Buyed == false)
             {
                 TryBuyProduct(newSkin.BuyID);
-                newSkin.Buyed = true;
-                PlayerPrefs.SetInt(newSkin.BuyID, 1);
+                //newSkin.Buyed = true;
+                //PlayerPrefs.SetInt(newSkin.BuyID, 1);
             }
         }
         else if (tryBuy && !newSkin.Buyed)

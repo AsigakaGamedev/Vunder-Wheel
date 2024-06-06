@@ -6,6 +6,9 @@ using UnityEngine.Purchasing.Extension;
 
 public class PurchaseManager : MonoBehaviour, IDetailedStoreListener
 {
+    [SerializeField] private GunSkinInfo gunSkinInfo;
+    [SerializeField] private CarouselInfo carouselInfo;
+
     private static PurchaseManager _instance;
     public IStoreController _storeController;
     private IExtensionProvider _storeExtensionProvider;
@@ -22,6 +25,13 @@ public class PurchaseManager : MonoBehaviour, IDetailedStoreListener
                 _instance.InitializePurchasing();
             }
             return _instance;
+        }
+        set
+        {
+            if (_instance == null)
+            {
+                _instance = value;
+            }
         }
     }
 
@@ -65,11 +75,12 @@ public class PurchaseManager : MonoBehaviour, IDetailedStoreListener
             case "pumpkin_king":
                 Debug.Log("pumpkin_king successfully purchased!");
                 PopukayuMagazinAz.Instance.ShowSuccess();
-                //сохран скина
+                carouselInfo.Buyed = true;
                 break;
             case "mythical_guns":
                 Debug.Log("mythical_guns successfully purchased!");
                 PopukayuMagazinAz.Instance.ShowSuccess();
+                gunSkinInfo.Buyed = true;
                 break;
             default:
                 Debug.Log($"Unexpected product ID: {args.purchasedProduct.definition.id}");
@@ -121,30 +132,5 @@ public class PurchaseManager : MonoBehaviour, IDetailedStoreListener
     {
         PopukayuMagazinAz.Instance.ShowFailed();
         Debug.Log($"Purchase of {product.definition.id} failed due to {failureDescription}");
-    }
-
-    private void TryBuyProduct(string stringId)
-    {
-        if (!PurchaseManager.Instance.IsInitialized())
-        {
-            Debug.Log("IAP is not initialized.");
-            PopukayuMagazinAz.Instance.ShowFailed();
-            return;
-        }
-
-        Product product = PurchaseManager.Instance._storeController.products.WithID(stringId);
-
-        PopukayuMagazinAz.Instance.ShowLoading();
-
-        if (product != null && product.availableToPurchase)
-        {
-            Debug.Log($"Purchasing product asynchronously: '{product.definition.id}'");
-            PurchaseManager.Instance._storeController.InitiatePurchase(product);
-        }
-        else
-        {
-            Debug.Log($"Could not initiate purchase for product ID: {stringId}. It might not be available for purchase.");
-            PopukayuMagazinAz.Instance.ShowFailed();
-        }
     }
 }

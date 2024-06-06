@@ -8,6 +8,7 @@ public class GlobalInstaller : MonoInstaller
     [SerializeField] private GunSkinsManager gunSkinsMnager;
     [SerializeField] private CarouselsSkinsManager carouselsSkins;
     [SerializeField] private MoneyManager moneyManager;
+    [SerializeField] private PurchaseManager purchaseManager;
 
     public override void InstallBindings()
     {
@@ -16,5 +17,8 @@ public class GlobalInstaller : MonoInstaller
         Container.Bind<MoneyManager>().FromInstance(moneyManager);
         Container.Bind<GunSkinsManager>().FromInstance(gunSkinsMnager);
         gunSkinsMnager.EquipNew(0);
+
+        PurchaseManager.Instance = purchaseManager;
+        purchaseManager.InitializePurchasing();
     }
 }
